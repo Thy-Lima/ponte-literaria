@@ -1,0 +1,29 @@
+<ng-container *ngIf="autor.publicacoesAutor && autor.publicacoesAutor.length > 0; else semPublicacoes">
+  <div class="publicacoesPopulares">
+    <ion-row>
+      <h4>Publicações mais populares</h4>
+    </ion-row>
+  </div>
+  
+  <div>
+    <ion-row>
+      <ion-col *ngFor="let publicacao of autor.publicacoesAutor">
+        <ion-card (click)="redirecionarPaginaPublicacao( publicacao.idPublicacao )">
+          <ion-card-header>
+            <div class="imagem">
+              <img [src]="publicacao.fotosPublicacao[0]">
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            <h2>{{ publicacao.tituloPublicacao }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+    </ion-row>
+  </div>
+</ng-container>
+
+<ng-template #semPublicacoes>
+  <ion-label class="autorSemPublicacoes">Esse autor ainda não possui publicações</ion-label>
+</ng-template>

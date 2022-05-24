@@ -1,0 +1,47 @@
+
+ion-row {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
+}
+
+.loginLabel {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+ion-input {
+    border: 0.5px solid black;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.esqueciSenha {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+ion-button {
+    width: 100%;
+    height: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.semCadastro {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

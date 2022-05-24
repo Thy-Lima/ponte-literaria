@@ -1,0 +1,138 @@
+<ng-container *ngIf="usuarioLogado.idUsuario == 1; else semLogar">
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        
+        <ion-item>
+          <ion-icon name="add" slot="start"></ion-icon>
+          <ion-label>Nova publicações</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="analytics" slot="start"></ion-icon>
+          <ion-label>Gráficos</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="book" slot="start"></ion-icon>
+          <ion-label>Publicações</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bag-add" slot="start"></ion-icon>
+          <ion-label>Pedidos</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="eye" slot="start"></ion-icon>
+          <ion-label>Pré-visualizaar</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Cadastro</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="close" slot="start"></ion-icon>
+          <ion-label>Sair</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ng-container>
+
+<ng-template #semLogar>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        
+        <ion-item>
+          <ion-icon name="book" slot="start"></ion-icon>
+          <ion-label>Publicações</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="document" slot="start"></ion-icon>
+          <ion-label>Gêneros</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-label>Autores</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ng-template>
+
+<ion-header id="main-content">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Ponte Literária</ion-title>
+    </ion-buttons>
+    
+    
+
+    <div>
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          <ion-row class="ion-align-items-center">
+            <ion-col>
+              <ion-searchbar></ion-searchbar>
+            </ion-col>
+            <ion-col class="alinhamentoBotaoBuscar" size="auto">
+              <ion-button fill="solid" expand="small">Buscar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4" (click)="redirecionarLogin()" class="logonUsuario">
+          <ion-row class="ion-align-items-center">
+            <ion-col size="auto" *ngIf="usuarioLogado != undefined">
+              <ion-avatar>
+                <ng-container *ngIf="usuarioLogado.idUsuario == 0; else comLogin">
+                  <img src="../assets/avatar/default/person.jpg">    
+                </ng-container>
+
+                <ng-template #comLogin>
+                  <img [src]="usuarioLogado.cadastroUsuario.fotoAutor">
+                </ng-template>
+              </ion-avatar>
+            </ion-col>
+            <ion-col *ngIf="usuarioLogado">
+              <ng-container *ngIf="usuarioLogado.idUsuario == 0; else nomeUsuarioLogado">
+                <ion-label>Login</ion-label>
+              </ng-container>
+
+              <ng-template #nomeUsuarioLogado>
+                <ion-label>{{ usuarioLogado.cadastroUsuario.nomeAutor }}</ion-label>
+              </ng-template>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="auto" class="alinhamentoDireita">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </ion-col>
+            <ion-col size="auto">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </ion-col>
+            <ion-col size="auto">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-col>
+            <ion-col size="1">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+

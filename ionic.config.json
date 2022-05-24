@@ -1,0 +1,7 @@
+{
+  "name": "ponte-literaria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

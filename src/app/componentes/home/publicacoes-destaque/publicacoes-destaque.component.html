@@ -1,0 +1,23 @@
+<div class="publicacoesPopulares">
+  <ion-row>
+    <h4>Publicações mais populares</h4>
+  </ion-row>
+</div>
+
+<div>
+  <ion-row>
+    <ion-col *ngFor="let publicacao of publicacoesDestaque">
+      <ion-card>
+        <ion-card-header>
+          <div class="imagem">
+            <img [src]="publicacao.fotosPublicacao[0]">
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <h2>{{ publicacao.tituloPublicacao }}</h2>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+</div>

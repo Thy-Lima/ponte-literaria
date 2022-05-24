@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ponte-literaria",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

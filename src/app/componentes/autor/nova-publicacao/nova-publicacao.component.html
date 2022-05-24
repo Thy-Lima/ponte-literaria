@@ -1,0 +1,121 @@
+<div>
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Titulo:</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="text" placeholder="Insira o titulo da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Descrição:</ion-label>
+  </ion-row>
+ 
+  <ion-row class="ion-align-items-center">
+    <ion-textarea placeholder="Insira a descrição da publicação"></ion-textarea>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Gênero</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelSelecao" (click)="abrirModalGeneros()">Selecione</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Faixa Etária</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="text" placeholder="Insira a faixa etária da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Peso (kg)</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="number" placeholder="Insira o peso do livro"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Quantidade de páginas</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="number" placeholder="Insira a quantidade de páginas da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Preço</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="number" placeholder="Insira o preço de venda da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Fotos</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <label for="arquivo">
+            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
+
+            <ng-template #comImagem>
+              <img [src]="imageUrl">
+            </ng-template>
+          </label>
+          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <label for="arquivo">
+            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
+
+            <ng-template #comImagem>
+              <img [src]="imageUrl">
+            </ng-template>
+          </label>
+          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <label for="arquivo">
+            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
+
+            <ng-template #comImagem>
+              <img [src]="imageUrl">
+            </ng-template>
+          </label>
+          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <label for="arquivo">
+            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
+
+            <ng-template #comImagem>
+              <img [src]="imageUrl">
+            </ng-template>
+          </label>
+          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
+        </ion-card-content>
+      </ion-card>
+    </ion-col>  
+  </ion-row>
+</div>
+

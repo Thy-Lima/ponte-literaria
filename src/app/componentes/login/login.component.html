@@ -1,0 +1,29 @@
+<div>
+  <ion-row class="ion-align-items-center">
+    <ion-label class="loginLabel">Login</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="text" [(ngModel)]="emailAutor" placeholder="Insira seu e-mail"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="password" [(ngModel)]="senhaAutor" placeholder="Insira sua senha"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="esqueciSenha">Esqueci minha senha</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-button fill="solid" expand="block" (click)="realizarLogin()">Entrar</ion-button>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="semCadastro">Ainda não possui cadastro?</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-button fill="solid" expand="block">Cadastre-se</ion-button>
+  </ion-row>
+</div>

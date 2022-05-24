@@ -1,0 +1,31 @@
+<div class="tituloAutores">
+  <ion-row>
+    <h4>Autores mais buscados</h4>
+  </ion-row>
+</div>
+
+<div>
+  <ion-row class="ion-align-items-center">
+    
+    <ion-col>
+      <div class="containerAutores">
+        <ion-row>
+          <ion-col *ngFor="let autor of autoresDestaque">
+            <ion-card>
+              <ion-card-header>
+                <ion-avatar [routerLink]="'../pagina-autor/' + autor.idAutor">
+                  <img [src]="autor.fotoAutor">
+                </ion-avatar>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-label>{{ autor.nomeAutor }} {{ autor.sobrenomeAutor }}</ion-label>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      </div>
+    </ion-col>
+    
+  </ion-row>
+</div>

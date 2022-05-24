@@ -1,0 +1,11 @@
+<ng-container *ngIf="autor">
+  <app-toolbar></app-toolbar>
+
+  <ion-content>
+    <app-header-pagina-autor [autor]="autor"></app-header-pagina-autor>
+
+    <app-publicacoes-pagina-autor [autor]="autor"></app-publicacoes-pagina-autor>
+    
+    <app-footer></app-footer>
+  </ion-content>
+</ng-container>

@@ -1,0 +1,27 @@
+<div class="headerImagens">
+  <div class="capaAutor">
+    <img [src]="autor.capaAutor">
+  </div>
+
+  <ion-avatar>
+    <img [src]="autor.fotoAutor">
+  </ion-avatar>
+
+  <h1>{{ autor.nomeAutor }} {{ autor.sobrenomeAutor }}</h1>
+</div>
+
+<div class="biografia">
+  <ion-row class="ion-align-items-center">
+    <ion-col size="1.99">
+      <list>
+        <li class="liTitulo">Gênero(s)</li>
+        <li *ngFor="let generos of autor.generosAutor">#{{ generos.tituloGenero }}</li>
+      </list>
+    </ion-col>
+    <ion-col>
+          <p>
+            {{ autor.biografiaAutor }}
+          </p>
+    </ion-col>
+  </ion-row>
+</div>

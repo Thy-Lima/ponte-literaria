@@ -1,0 +1,32 @@
+<app-toolbar></app-toolbar>
+
+<ion-content>
+  <div *ngIf="0 == 1" class="ion-padding">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="6">
+        <app-advanced-chart></app-advanced-chart>
+      </ion-col>
+      <ion-col size="6">
+        <div class="container">
+          <ion-label class="labelPie">Vendas realizadas no mês</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4">
+        <div class="container">
+          <ion-label class="labelBar">Visualizações por publicacção</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="8">
+        <app-bar-chart></app-bar-chart>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="0 == 0" class="ion-padding">
+    <app-nova-publicacao></app-nova-publicacao>
+  </div>
+  
+  <app-footer></app-footer>
+</ion-content>

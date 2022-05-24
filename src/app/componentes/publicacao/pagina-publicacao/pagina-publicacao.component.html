@@ -1,0 +1,157 @@
+<ng-container *ngIf="publicacao != undefined && autorPublicacao != undefined">
+  <div class="tamanhoMaximoLinha">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-row class="ion-align-items-center">
+          <ion-col class="margensFotosAdicionais" size="auto">
+            <ion-row class="teste">
+              <ion-card class="fotosAdicionais">
+                <ion-card-header>
+                  <img [src]="publicacao.fotosPublicacao[0]">
+                </ion-card-header>
+              </ion-card>
+            </ion-row>
+            <ion-row class="teste">
+              <ion-card class="fotosAdicionais">
+                <ion-card-header>
+                  <img [src]="publicacao.fotosPublicacao[0]">
+                </ion-card-header>
+              </ion-card>
+            </ion-row>
+            <ion-row class="teste">
+              <ion-card class="fotosAdicionais">
+                <ion-card-header>
+                  <img [src]="publicacao.fotosPublicacao[0]">
+                </ion-card-header>
+              </ion-card>
+            </ion-row>
+            <ion-row class="teste">
+              <ion-card class="fotosAdicionais">
+                <ion-card-header>
+                  <img [src]="publicacao.fotosPublicacao[0]">
+                </ion-card-header>
+              </ion-card>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <ion-card-header>
+                <img [src]="publicacao.fotosPublicacao[0]">
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-card class="cardDados">
+          <ion-card-header>
+            <ion-label>{{ publicacao.tituloPublicacao }}</ion-label>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="dadosPublicacao">
+              <ion-row class="ion-align-items-center">
+                <ion-label class="subHeaderCard">Cód: {{ publicacao.idPublicacao }}</ion-label>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-label class="subHeaderCard">Autor: {{ autorPublicacao.nomeAutor }} {{ autorPublicacao.sobrenomeAutor }}</ion-label>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-label class="precoAnterior">De: R$ 100</ion-label>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-label class="porLabel">Por: </ion-label>
+                <ion-label class="precoPublicacao">R$ {{ publicacao.precoPublicacao }}</ion-label>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-button fill="solid" expand="block" class="botaoComprar">Comprar</ion-button>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-label class="calcularFrete">Calcular Frete</ion-label>
+              </ion-row>
+              <ion-row class="ion-align-items-center">
+                <ion-col>
+                  <ion-input tyoe="number" placeholder="00000-000"></ion-input>
+                </ion-col>
+                <ion-col size="auto">
+                  <ion-button fill="clear" expand="small">Calcular</ion-button>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="descricaoPublicacao">
+    <ion-row class="ion-align-items-center">
+      <ion-label class="descricaoPublicacaoTitulo">Descrição:</ion-label>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <p>
+        {{ publicacao.descricaoPublicacao }}
+      </p>
+    </ion-row>
+  </div>
+  <div class="detalhesPublicacao">
+    <ion-row class="ion-align-items-center">
+      <ion-label class="detalhesPublicacaoTitulo">Detalhes</ion-label>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Código:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.idPublicacao }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Titulo:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.tituloPublicacao }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Gênero:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.generoPublicacao.tituloGenero }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Faixa Etária:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.faixaEtariaPublicacao }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Autor:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ autorPublicacao.nomeAutor }} {{ autorPublicacao.sobrenomeAutor }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Peso:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.pesoPublicacao }} kg</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">Páginas:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="alinhamentoDetalhes">{{ publicacao.qtdPaginasPublicacao }}</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+</ng-container>
