@@ -1,7 +1,7 @@
 <app-toolbar></app-toolbar>
 
 <ion-content>
-  <div *ngIf="0 == 1" class="ion-padding">
+  <div *ngIf="componenteExibido == 0" class="ion-padding">
     <ion-row class="ion-align-items-center">
       <ion-col size="6">
         <app-advanced-chart></app-advanced-chart>
@@ -24,8 +24,26 @@
     </ion-row>
   </div>
 
-  <div *ngIf="0 == 0" class="ion-padding">
+  <div *ngIf="componenteExibido == 1" class="ion-padding">
     <app-nova-publicacao></app-nova-publicacao>
+  </div>
+
+  <div *ngIf="componenteExibido == 2" class="ion-padding">
+    <app-publicacoes-pagina-autor [autor]="autor"></app-publicacoes-pagina-autor>
+  </div>
+
+  <div *ngIf="componenteExibido == 3" class="ion-padding">
+    <app-dados-cadastrais></app-dados-cadastrais>
+  </div>
+
+  <div *ngIf="componenteExibido == 4" class="ion-padding">
+    <app-pedidos></app-pedidos>
+  </div>
+
+  <div *ngIf="componenteExibido == 5">
+    <app-header-pagina-autor [autor]="autor"></app-header-pagina-autor>
+
+    <app-publicacoes-pagina-autor class="ion-padding" [autor]="autor"></app-publicacoes-pagina-autor>
   </div>
   
   <app-footer></app-footer>

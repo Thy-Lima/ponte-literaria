@@ -1,0 +1,92 @@
+<div>
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="tituloLista">Aguardando Pagamento</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-col>
+        <ion-label>Código</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Iitens</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Data de Emissão</ion-label>
+      </ion-col>
+    </ion-item>
+    <ion-item *ngFor="let emitido of pedidosEmitidos">
+      <ion-col>
+        <ion-label>{{ emitido.codigoPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ emitido.itensPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ emitido.dataEmissaoPedido }}</ion-label>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</div>
+
+<div>
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="tituloLista">Pedidos com Pagamento Confirmado</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-col>
+        <ion-label>Códio</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Itens</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Data de Confirmação</ion-label>
+      </ion-col>
+    </ion-item>
+    <ion-item *ngFor="let confirmado of pedidosConfirmados">
+      <ion-col>
+        <ion-label>{{ confirmado.codigoPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ confirmado.itensPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ confirmado.dataConfirmacaoPedido }}</ion-label>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</div>
+
+<div>
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="tituloLista">Pedidos enviados</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-col>
+        <ion-label>Código</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Itens</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>Data de Envio</ion-label>
+      </ion-col>
+    </ion-item>
+    <ion-item *ngFor="let enviado of pedidosEnviados">
+      <ion-col>
+        <ion-label>{{ enviado.codigoPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ enviado.itensPedido }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ enviado.dataEnvioPedido }}</ion-label>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</div>

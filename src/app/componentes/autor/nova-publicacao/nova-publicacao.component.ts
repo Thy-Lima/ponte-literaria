@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { modeloPublicacao } from 'src/app/services/publicacoes/publicacoes.service';
+import { ModalGenerosPage } from 'src/app/paginas/modal-generos/modal-generos.page';
+import { modeloPublicacao, PublicacoesService } from 'src/app/services/publicacoes/publicacoes.service';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
-import { ModalGenerosComponent } from '../../modal-generos/modal-generos.component';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nova-publicacao',
@@ -11,7 +12,7 @@ import { ModalGenerosComponent } from '../../modal-generos/modal-generos.compone
 })
 export class NovaPublicacaoComponent implements OnInit {
 
-  constructor( public modalCtrl: ModalController ) { }
+  constructor( public modalCtrl: ModalController, public router: Router ) { }
 
   public novaPublicacao: modeloPublicacao = {
     idPublicacao: 6,
@@ -31,22 +32,29 @@ export class NovaPublicacaoComponent implements OnInit {
   
   public preview( files, event ){
     let reader = new FileReader();
-    this.imagePath = files;
-    reader.readAsDataURL( files[0] );
-    reader.onload = (event) => {
-      this.imageUrl = reader.result;
-    }
+      this.imagePath = files;
+      reader.readAsDataURL( files[0] );
+      reader.onload = (event) => {
+        this.imageUrl = reader.result;
+        this.novaPublicacao.fotosPublicacao.push( this.imageUrl );
+      }
   }
-  
+    
   public async abrirModalGeneros() {
     const modal = await this.modalCtrl.create({
-      component: ModalGenerosComponent,
+      component: ModalGenerosPage,
       componentProps: {
         'novaPublicacao': this.novaPublicacao
       }
     });
 
     return await modal.present();
+  }
+  
+  public salvarNovaPublicacao() {
+    PublicacoesService.publicacoesCadastradas.push( this.novaPublicacao );
+    
+    this.router.navigateByUrl( 'dashboard-autor/0' );
   }
   
   ngOnInit() {}

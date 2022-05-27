@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ModalGenerosComponent } from './modal-generos.component';
+import { ResultadosBuscaComponent } from './resultados-busca.component';
 
-describe('ModalGenerosComponent', () => {
-  let component: ModalGenerosComponent;
-  let fixture: ComponentFixture<ModalGenerosComponent>;
+describe('ResultadosBuscaComponent', () => {
+  let component: ResultadosBuscaComponent;
+  let fixture: ComponentFixture<ResultadosBuscaComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalGenerosComponent ],
+      declarations: [ ResultadosBuscaComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModalGenerosComponent);
+    fixture = TestBed.createComponent(ResultadosBuscaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

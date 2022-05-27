@@ -1,0 +1,156 @@
+<div *ngIf="autor">
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-label class="tituloSecao">Dados Pessoais</ion-label>
+  </ion-row>
+  
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-avatar>
+        <img [src]="autor.fotoAutor">
+      </ion-avatar>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Nome</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>{{ autor.nomeAutor }}</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Sobrenome</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>{{ autor.sobrenomeAutor }}</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">CPF</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>123.456.789-10</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Sexo</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>Masculino</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Data de Nascimento</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>25/11/1965</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-label class="tituloSecao">Endereço</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Logradouro</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>Rua das Pamplonas</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Numero</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>115</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">CEP</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>03254-380</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Complemento</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>Casa 1</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Bairro</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>Vila São José</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Cidade</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>São Paulo</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">UF</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>SP</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center, alinhamentoCadastro">
+    <ion-label class="tituloSecao">Contato</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-alin-items-center, alinhamentoCadastro">
+    <ion-col>
+      <ion-row class="ion-alin-items-center">
+        <ion-label class="tituloCampo">E-mail</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>autor@gmail.com</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Telefone</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>11 2122-2324</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="ion-align-items-center">
+        <ion-label class="tituloCampo">Celular</ion-label>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-label>11 95502-3313</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

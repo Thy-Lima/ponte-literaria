@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'modal-generos',
+    loadChildren: () => import('./paginas/modal-generos/modal-generos.module').then( m => m.ModalGenerosPageModule)
+  },
+  {
+    path: 'pagina-resultado-busca',
+    loadChildren: () => import('./paginas/pagina-resultado-busca/pagina-resultado-busca.module').then( m => m.PaginaResultadoBuscaPageModule)
   }
 ];
 

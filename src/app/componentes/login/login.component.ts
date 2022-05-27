@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
   
   public redirecionarPaginaAutor() {
-    this.router.navigateByUrl( 'dashboard-autor' );
+    this.router.navigateByUrl( 'dashboard-autor/0' );
   }
   
   ngOnInit() {}

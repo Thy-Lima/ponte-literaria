@@ -1,11 +1,12 @@
-.labelTitulo {
+.tituloLista {
     margin-left: 50%;
     transform: translateX(-50%);
+    font-size: 1em;
     font-weight: bolder;
-    font-size: 1.5em;
 }
 
-.itensLista {
+.itemLista {
+    font-size: 0.8em;
     margin-left: 50%;
     transform: translateX(-50%);
 }

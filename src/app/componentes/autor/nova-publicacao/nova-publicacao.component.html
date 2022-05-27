@@ -4,7 +4,7 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="text" placeholder="Insira o titulo da publicação"></ion-input>
+    <ion-input type="text" [(ngModel)]="novaPublicacao.tituloPublicacao" placeholder="Insira o titulo da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -12,7 +12,7 @@
   </ion-row>
  
   <ion-row class="ion-align-items-center">
-    <ion-textarea placeholder="Insira a descrição da publicação"></ion-textarea>
+    <ion-textarea [(ngModel)]="novaPublicacao.descricaoPublicacao" placeholder="Insira a descrição da publicação"></ion-textarea>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -20,7 +20,11 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelSelecao" (click)="abrirModalGeneros()">Selecione</ion-label>
+    <ion-label *ngIf="novaPublicacao.generoPublicacao == null; else comGenero" class="labelSelecao" (click)="abrirModalGeneros()">Selecione</ion-label>
+  
+    <ng-template #comGenero>
+      <ion-label class="labelSelecao" (click)="abrirModalGeneros()">{{ novaPublicacao.generoPublicacao.tituloGenero }}</ion-label>
+    </ng-template>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -28,7 +32,7 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="text" placeholder="Insira a faixa etária da publicação"></ion-input>
+    <ion-input type="text" [(ngModel)]="novaPublicacao.faixaEtariaPublicacao" placeholder="Insira a faixa etária da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -36,7 +40,7 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" placeholder="Insira o peso do livro"></ion-input>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.pesoPublicacao" placeholder="Insira o peso do livro"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -44,7 +48,7 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" placeholder="Insira a quantidade de páginas da publicação"></ion-input>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.qtdPaginasPublicacao" placeholder="Insira a quantidade de páginas da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -52,7 +56,7 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" placeholder="Insira o preço de venda da publicação"></ion-input>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.precoPublicacao" placeholder="Insira o preço de venda da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -74,48 +78,9 @@
         </ion-card-content>
       </ion-card>
     </ion-col>
-    <ion-col>
-      <ion-card>
-        <ion-card-content>
-          <label for="arquivo">
-            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
-
-            <ng-template #comImagem>
-              <img [src]="imageUrl">
-            </ng-template>
-          </label>
-          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>
-        <ion-card-content>
-          <label for="arquivo">
-            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
-
-            <ng-template #comImagem>
-              <img [src]="imageUrl">
-            </ng-template>
-          </label>
-          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>
-        <ion-card-content>
-          <label for="arquivo">
-            <ion-icon name="camera-sharp" *ngIf="!imageUrl; else comImagem"></ion-icon>
-
-            <ng-template #comImagem>
-              <img [src]="imageUrl">
-            </ng-template>
-          </label>
-          <input type="file" accept="images/" id="arquivo" #file class="fileInput" (change)="preview( file.files, $event )">
-        </ion-card-content>
-      </ion-card>
-    </ion-col>  
+  </ion-row>
+  <ion-row class="ion-alin-items-center">
+    <ion-button fill="solid" expand="black" (click)="salvarNovaPublicacao()">Salvar </ion-button>
   </ion-row>
 </div>
 

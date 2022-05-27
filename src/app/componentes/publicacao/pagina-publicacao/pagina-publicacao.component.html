@@ -63,7 +63,11 @@
                 <ion-label class="precoPublicacao">R$ {{ publicacao.precoPublicacao }}</ion-label>
               </ion-row>
               <ion-row class="ion-align-items-center">
-                <ion-button fill="solid" expand="block" class="botaoComprar">Comprar</ion-button>
+                <ion-button fill="solid" expand="block" *ngIf="!usuarioLogado; else autorLogado" class="botaoComprar">Comprar</ion-button>
+              
+                <ng-template #autorLogado>
+                  <ion-button fill="solid" expand="block" class="botaoComprarAutor">Comprar</ion-button>
+                </ng-template>
               </ion-row>
               <ion-row class="ion-align-items-center">
                 <ion-label class="calcularFrete">Calcular Frete</ion-label>

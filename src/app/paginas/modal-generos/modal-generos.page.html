@@ -1,0 +1,11 @@
+<div>
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="tituloLista">Selecione o gênero</ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none" *ngFor="let genero of listaGeneros">
+      <ion-label (click)="selecionarGenero( genero )" class="itemLista">{{ genero.tituloGenero }}</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
