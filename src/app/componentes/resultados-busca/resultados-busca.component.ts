@@ -7,26 +7,30 @@ import { PublicacoesService } from 'src/app/services/publicacoes/publicacoes.ser
   templateUrl: './resultados-busca.component.html',
   styleUrls: ['./resultados-busca.component.scss'],
 })
-export class ResultadosBuscaComponent implements OnInit {
+export class ResultadosBuscaComponent {
 
-  constructor() {}
+  constructor() {
+    this.filtrarPublicacoes();
+  }
   
     @Input() itemBuscado;
-    public resultadoPublicacoes;
+    public resultadoPublicacoes = [];
+    public resultadoAutores = [];
 
     public filtrarPublicacoes() {
-      let texto = [
-        { desc: 'Harry Potter' },
-        { desc: 'Spiderwick' }
-      ];
+      let str: string = "A caixa do dialogo";
 
-      this.resultadoPublicacoes = texto.filter( item => {
-        item.desc.indexOf( "Harry" ) > -1;
-      } )
+      if( str.includes( "do" ) ) {
+        this.resultadoAutores.push( str );
+      }
     }
 
-    ngOnInit() {
-      this.filtrarPublicacoes();
+    public filtrarAutores() {
+      for( let autor of AutoresService.autoresCadastrados ){
+        if( autor.nomeAutor.indexOf( this.itemBuscado) ){
+          this.resultadoAutores.push( autor );
+        }
+      }
     }
-  
+    
   }

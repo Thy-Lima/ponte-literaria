@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PublicacoesService } from 'src/app/services/publicacoes/publicacoes.service';
 
 @Component({
   selector: 'app-pagina-resultado-busca',

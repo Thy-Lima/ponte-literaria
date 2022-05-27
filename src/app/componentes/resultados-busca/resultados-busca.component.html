@@ -1,4 +1,5 @@
-<div>
-  <h1>{{ resultadoPublicacoes }}</h1>
-  <h1>{{ itemBuscado }}</h1>
-</div>
+<ion-list>
+  <ion-item *ngFOr="let item of resultadoPublicacoes">
+    <h1>{{ item }}</h1>
+  </ion-item>
+</ion-list>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicacoesService } from 'src/app/services/publicacoes/publicacoes.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-publicacoes-destaque',
@@ -8,7 +9,7 @@ import { PublicacoesService } from 'src/app/services/publicacoes/publicacoes.ser
 })
 export class PublicacoesDestaqueComponent implements OnInit {
 
-  constructor() {
+  constructor( public router: Router ) {
     this.preencherPublicacoesDestaque();
    }
 
@@ -18,6 +19,10 @@ export class PublicacoesDestaqueComponent implements OnInit {
     for( let i = 0; i < 4; i++ ){
       this.publicacoesDestaque.push( PublicacoesService.publicacoesCadastradas[i] );
     }
+  }
+  
+  public redirecionarPaginaPublicacao( id ) {
+    this.router.navigateByUrl( 'pagina-publicacao/' + id );
   }
   
   ngOnInit() {}

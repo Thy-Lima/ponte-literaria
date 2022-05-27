@@ -7,7 +7,7 @@
 <div>
   <ion-row>
     <ion-col *ngFor="let publicacao of publicacoesDestaque">
-      <ion-card>
+      <ion-card (click)="redirecionarPaginaPublicacao( publicacao.idPublicacao )">
         <ion-card-header>
           <div class="imagem">
             <img [src]="publicacao.fotosPublicacao[0]">
