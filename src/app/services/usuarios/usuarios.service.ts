@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AutoresService } from '../autores/autores.service';
+import { LeitoresService } from '../leitores/leitores.service';
 
 export interface modeloUsuario {
   idUsuario: number,
@@ -13,7 +14,8 @@ export interface modeloUsuario {
 })
 export class UsuariosService {
 
-  constructor() { }
+  constructor() {
+  }
 
   static usuarioLogado: modeloUsuario = {
     idUsuario: 0,
@@ -24,6 +26,6 @@ export class UsuariosService {
 
   static usuariosCadastrados: modeloUsuario[] = [
     { idUsuario: 1, emailUsuario: 'autor@gmail.com', senhaUsuario: '123456', cadastroUsuario: AutoresService.autoresCadastrados[0] },
-    { idUsuario: 2, emailUsuario: 'leitor@gmail.com', senhaUsuario: '123456', cadastroUsuario: null }
+    { idUsuario: 2, emailUsuario: 'leitor@gmail.com', senhaUsuario: '123456', cadastroUsuario: LeitoresService.leitoresCadastrados[0] }
   ];
 }

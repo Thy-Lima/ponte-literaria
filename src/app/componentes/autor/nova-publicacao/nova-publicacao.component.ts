@@ -22,8 +22,10 @@ export class NovaPublicacaoComponent implements OnInit {
   generoPublicacao: null,
   faixaEtariaPublicacao: '',
   pesoPublicacao: 0,
+  tamPublicacao: [0, 0],
   qtdPaginasPublicacao: 0,
-  precoPublicacao: 0,
+  precoDePublicacao: 0,
+  precoPorPublicacao: 0,
   fotosPublicacao: []
   };
   

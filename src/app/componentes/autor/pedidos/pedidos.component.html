@@ -1,92 +1,190 @@
 <div>
-  <ion-list>
-    <ion-list-header>
-      <ion-label class="tituloLista">Aguardando Pagamento</ion-label>
-    </ion-list-header>
+  <ion-row class="linhaPedidos">
+    <ion-label class="tituloTabela">Pedidos</ion-label>
+  </ion-row>
+  
+  <ion-grid >
+    <ion-row  size="500px"> 
+      <ion-col class="color">
+        Nome
+      </ion-col>
+      <ion-col class="color">
+      Data
+    </ion-col>
+      <ion-col class="color">
+        Qtd
+      </ion-col>
+      <ion-col class="color">
+        Status
+      </ion-col>
+    </ion-row>
 
-    <ion-item>
+    <ion-row size="500px">
       <ion-col>
-        <ion-label>Código</ion-label>
+        Pedro Antônio Alves
+      </ion-col>
+      <ion-col >
+      30/05/2022
+    </ion-col>
+      <ion-col>
+       5
       </ion-col>
       <ion-col>
-        <ion-label>Iitens</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>Data de Emissão</ion-label>
-      </ion-col>
-    </ion-item>
-    <ion-item *ngFor="let emitido of pedidosEmitidos">
-      <ion-col>
-        <ion-label>{{ emitido.codigoPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ emitido.itensPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ emitido.dataEmissaoPedido }}</ion-label>
-      </ion-col>
-    </ion-item>
-  </ion-list>
+      Pago
+    </ion-col>
+    </ion-row>
+
+    <ion-row size="500px">
+    <ion-col>
+      Juliana Nascimento
+    </ion-col>
+    <ion-col >
+    21/05/2022
+  </ion-col>
+    <ion-col>
+     2
+    </ion-col>
+    <ion-col>
+    Aguardando pagamento
+  </ion-col>
+  </ion-row>
+
+  <ion-row size="500px">
+  <ion-col>
+    Danilo Costa
+  </ion-col>
+  <ion-col >
+  20/05/2022
+</ion-col>
+  <ion-col>
+   1
+  </ion-col>
+  <ion-col>
+  Aguardando pagamento
+</ion-col>
+</ion-row>
+
+<ion-row size="500px">
+<ion-col>
+  João Fonseca
+</ion-col>
+<ion-col >
+12/05/2022
+</ion-col>
+<ion-col>
+ 2
+</ion-col>
+<ion-col>
+Enviado
+</ion-col>
+</ion-row>
+  </ion-grid>
 </div>
 
 <div>
-  <ion-list>
-    <ion-list-header>
-      <ion-label class="tituloLista">Pedidos com Pagamento Confirmado</ion-label>
-    </ion-list-header>
+  <ion-row class="linhaPedidos">
+    <ion-label class="tituloTabela">Publicações</ion-label>
+  </ion-row>
 
-    <ion-item>
-      <ion-col>
-        <ion-label>Códio</ion-label>
+  <ion-grid >
+    <ion-row  size="500px"> 
+      <ion-col class="color">
+        Nome
       </ion-col>
-      <ion-col>
-        <ion-label>Itens</ion-label>
+      <ion-col class="color">
+        Qtd
       </ion-col>
-      <ion-col>
-        <ion-label>Data de Confirmação</ion-label>
-      </ion-col>
-    </ion-item>
-    <ion-item *ngFor="let confirmado of pedidosConfirmados">
-      <ion-col>
-        <ion-label>{{ confirmado.codigoPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ confirmado.itensPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ confirmado.dataConfirmacaoPedido }}</ion-label>
-      </ion-col>
-    </ion-item>
-  </ion-list>
-</div>
+    </ion-row>
 
-<div>
-  <ion-list>
-    <ion-list-header>
-      <ion-label class="tituloLista">Pedidos enviados</ion-label>
-    </ion-list-header>
+    <ion-row size="500px">
+      <ion-col>
+      Aura
+      </ion-col>
+      <ion-col>
+       5
+      </ion-col>
+    </ion-row>
 
-    <ion-item>
-      <ion-col>
-        <ion-label>Código</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>Itens</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>Data de Envio</ion-label>
-      </ion-col>
-    </ion-item>
-    <ion-item *ngFor="let enviado of pedidosEnviados">
-      <ion-col>
-        <ion-label>{{ enviado.codigoPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ enviado.itensPedido }}</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>{{ enviado.dataEnvioPedido }}</ion-label>
-      </ion-col>
-    </ion-item>
-  </ion-list>
+    <ion-row size="500px">
+    <ion-col>
+    Coelho Nero
+    </ion-col>
+    <ion-col>
+     2
+    </ion-col>
+  </ion-row>
+
+  <ion-row size="500px">
+  <ion-col>
+  Histórias Passageiras
+  </ion-col>
+  <ion-col>
+   1
+  </ion-col>
+</ion-row>
+
+
+<ion-row size="500px">
+<ion-col>
+Meninos e Dragões
+</ion-col>
+<ion-col>
+ 5
+</ion-col>
+</ion-row>
+
+<ion-row size="250px">
+<ion-col>
+O Alienista – Em Quadrinhos</ion-col>
+<ion-col>
+1
+</ion-col>
+</ion-row>
+
+<ion-row size="250px">
+<ion-col>
+Omar Viñole – Sketchbook Custom
+</ion-col>
+<ion-col>
+1
+</ion-col>
+</ion-row>
+
+<ion-row size="250px">
+<ion-col>
+Orixás – em Guerra
+</ion-col>
+<ion-col>
+1
+</ion-col>
+</ion-row>
+
+<ion-row size="250px">
+<ion-col>
+Orixás: do Orum ao Ayê
+</ion-col>
+<ion-col>
+1
+</ion-col>
+</ion-row>
+
+
+  <ion-row size="500px">
+  <ion-col>
+  Volkan 01
+  </ion-col>
+  <ion-col>
+   1
+  </ion-col>
+</ion-row>
+
+<ion-row size="500px">
+<ion-col>
+Volkan 02
+</ion-col>
+<ion-col>
+ 2
+</ion-col>
+</ion-row>
+  </ion-grid>
 </div>

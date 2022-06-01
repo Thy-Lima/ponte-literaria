@@ -1,12 +1,29 @@
-.tituloLista {
-    font-size: 1.5em;
-    font-weight: bolder;
-    margin-left: 50%;
-    transform: translateX(-25%);
-}
-
 ion-col {
+    border: 1px solid grey;
     text-align: center;
-    align-items: center;
-    vertical-align: middle;
-}
+  }
+  .color {
+    background-color: rgb(203, 214, 214);
+  }
+
+  .tituloTabela {
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  div {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;  
+  }
+
+  ion-col {
+    border: 1px solid grey;
+    text-align: center;
+  }
+  .color {
+    background-color: rgb(203, 214, 214);
+  }
+  

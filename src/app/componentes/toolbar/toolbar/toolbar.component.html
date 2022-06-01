@@ -1,4 +1,4 @@
-<ng-container *ngIf="usuarioLogado.idUsuario == 1; else semLogar">
+<ng-container *ngIf="usuarioLogado.idUsuario == 1; else segundoTeste">
   <ion-menu side="start" content-id="main-content">
     <ion-header>
       <ion-toolbar translucent>
@@ -8,29 +8,25 @@
     <ion-content>
       <ion-list>
         
-        <ion-item (click)="redirecionarDashboard( 1 )">
-          <ion-icon name="add" slot="start"></ion-icon>
-          <ion-label>Nova publicações</ion-label>
-        </ion-item>
         <ion-item (click)="redirecionarDashboard( 0 )">
-          <ion-icon name="analytics" slot="start"></ion-icon>
-          <ion-label>Gráficos</ion-label>
+          <ion-icon name="home-sharp" slot="start"></ion-icon>
+          <ion-label>Home</ion-label>
         </ion-item>
-        <ion-item (click)="redirecionarDashboard( 2 )">
-          <ion-icon name="book" slot="start"></ion-icon>
-          <ion-label>Publicações</ion-label>
-        </ion-item>
-        <ion-item (click)="redirecionarDashboard( 4 )">
-          <ion-icon name="bag-add" slot="start"></ion-icon>
-          <ion-label>Pedidos</ion-label>
-        </ion-item>
-        <ion-item (click)="redirecionarDashboard( 5 )">
-          <ion-icon name="eye" slot="start"></ion-icon>
-          <ion-label>Pré-visualizaar</ion-label>
+        <ion-item (click)="redirecionarDashboard( 1 )">
+          <ion-icon name="book-sharp" slot="start"></ion-icon>
+          <ion-label>Cadastrar publicações</ion-label>
         </ion-item>
         <ion-item (click)="redirecionarDashboard( 3 )">
           <ion-icon name="person" slot="start"></ion-icon>
-          <ion-label>Cadastro</ion-label>
+          <ion-label>Configurações do perfil</ion-label>
+        </ion-item>
+        <ion-item (click)="redirecionarDashboard( 5 )">
+          <ion-icon name="eye" slot="start"></ion-icon>
+          <ion-label>Visualizar perfil público</ion-label>
+        </ion-item>
+        <ion-item (click)="redirecionarDashboard( 2 )">
+          <ion-icon name="people-sharp" slot="start"></ion-icon>
+          <ion-label>Outros autores</ion-label>
         </ion-item>
         <ion-item (click)="redirecionarDashboard( 6 )">
           <ion-icon name="close" slot="start"></ion-icon>
@@ -40,6 +36,47 @@
     </ion-content>
   </ion-menu>
 </ng-container>
+
+<ng-template #segundoTeste>
+  <ng-container *ngIf="usuarioLogado.idUsuario == 2; else semLogar">
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          
+          <ion-item>
+            <ion-icon name="home-sharp" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="document-sharp" slot="start"></ion-icon>
+            <ion-label>Gêneros</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>Configurações do perfil</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="bag-check-sharp" slot="start"></ion-icon>
+            <ion-label>Pedidos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="heart-sharp" slot="start"></ion-icon>
+            <ion-label>Favoritos</ion-label>
+          </ion-item>
+          <ion-item (click)="redirecionarDashboard( 6 )">
+            <ion-icon name="close" slot="start"></ion-icon>
+            <ion-label>Sair</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </ng-container>
+</ng-template>
 
 <ng-template #semLogar>
   <ion-menu side="start" content-id="main-content">
@@ -52,17 +89,14 @@
       <ion-list>
         
         <ion-item>
-          <ion-icon name="book" slot="start"></ion-icon>
-          <ion-label>Publicações</ion-label>
+          <ion-icon name="home-sharp" slot="start"></ion-icon>
+          <ion-label>Home</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon name="document" slot="start"></ion-icon>
           <ion-label>Gêneros</ion-label>
         </ion-item>
-        <ion-item>
-          <ion-icon name="people" slot="start"></ion-icon>
-          <ion-label>Autores</ion-label>
-        </ion-item>
+        
       </ion-list>
     </ion-content>
   </ion-menu>
@@ -72,7 +106,7 @@
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      <ion-title>Ponte Literária</ion-title>
+      <img class="imgToolbarLogo" src="../assets/logo/logo.png">
     </ion-buttons>
     
     
@@ -98,7 +132,13 @@
                 </ng-container>
 
                 <ng-template #comLogin>
-                  <img [src]="usuarioLogado.cadastroUsuario.fotoAutor">
+                  <ng-container *ngIf="usuarioLogado.idUsuario == 1; else usuarioLeitorLogou">
+                    <img [src]="usuarioLogado.cadastroUsuario.fotoAutor">
+                  </ng-container>
+
+                  <ng-template #usuarioLeitorLogou>
+                    <img [src]="usuarioLogado.cadastroUsuario.fotoLeitor">
+                  </ng-template>
                 </ng-template>
               </ion-avatar>
             </ion-col>
@@ -108,25 +148,39 @@
               </ng-container>
 
               <ng-template #nomeUsuarioLogado>
-                <ion-label>{{ usuarioLogado.cadastroUsuario.nomeAutor }}</ion-label>
+                <ng-container *ngIf="usuarioLogado.idUsuario == 1; else usuarioLeitorLogado">
+                  <ion-label>{{ usuarioLogado.cadastroUsuario.nomeAutor }}</ion-label>
+                </ng-container>
+
+                <ng-template #usuarioLeitorLogado>
+                  <ion-label>{{ usuarioLogado.cadastroUsuario.nomeLeitor }}</ion-label>
+                </ng-template>
               </ng-template>
             </ion-col>
           </ion-row>
         </ion-col>
         <ion-col size="auto" class="alinhamentoDireita">
           <ion-row>
-            <ion-col size="auto">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </ion-col>
-            <ion-col size="auto">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </ion-col>
-            <ion-col size="auto">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </ion-col>
-            <ion-col size="1">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </ion-col>
+            <ng-container *ngIf="usuarioLogado.idUsuario == 2; else loginDiferenciado">
+              <ion-col size="auto">
+                <ion-icon name="cart-sharp"></ion-icon>
+              </ion-col>
+            </ng-container>
+
+            <ng-template #loginDiferenciado>
+              <ion-col size="auto">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </ion-col>
+              <ion-col size="auto">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </ion-col>
+              <ion-col size="auto">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </ion-col>
+            </ng-template>
           </ion-row>
         </ion-col>
       </ion-row>

@@ -1,0 +1,26 @@
+<div class="tituloAutores">
+  <ion-row>
+    <h4>Gêneros em alta</h4>
+  </ion-row>
+</div>
+
+<div>
+  <ion-row class="ion-align-items-center">
+    
+    <ion-col>
+      <div class="containerAutores">
+        <ion-row>
+          <ion-col *ngFor="let genero of listaGeneros">
+            <ion-card>
+              <ion-card-header>
+                <ion-label>{{ genero.tituloGenero }}</ion-label>
+              </ion-card-header>              
+            </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      </div>
+    </ion-col>
+    
+  </ion-row>
+</div>

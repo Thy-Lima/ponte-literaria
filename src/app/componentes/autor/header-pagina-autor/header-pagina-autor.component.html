@@ -3,21 +3,23 @@
     <img [src]="autor.capaAutor">
   </div>
 
-  <ion-avatar>
-    <img [src]="autor.fotoAutor">
-  </ion-avatar>
-
-  <h1>{{ autor.nomeAutor }} {{ autor.sobrenomeAutor }}</h1>
+ <ion-col>
+   <ion-avatar>
+     <img [src]="autor.fotoAutor">
+   </ion-avatar>
+ </ion-col>
+ <ion-col>
+   <ion-row>
+     <h1>{{ autor.nomeAutor }} {{ autor.sobrenomeAutor }}</h1>
+   </ion-row>
+   <ion-row class="alinhamentoGenerosAutor">
+    <ion-label *ngFor="let genero of autor.generosAutor">#{{ genero.tituloGenero }} </ion-label>
+   </ion-row>
+ </ion-col>
 </div>
 
 <div class="biografia">
   <ion-row class="ion-align-items-center">
-    <ion-col size="1.99">
-      <list>
-        <li class="liTitulo">Gênero(s)</li>
-        <li *ngFor="let generos of autor.generosAutor">#{{ generos.tituloGenero }}</li>
-      </list>
-    </ion-col>
     <ion-col>
           <p>
             {{ autor.biografiaAutor }}

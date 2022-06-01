@@ -6,8 +6,24 @@
   </div>
   
   <div>
-    <ion-row>
-      <ion-col *ngFor="let publicacao of autor.publicacoesAutor">
+    <ion-row *ngIf="publicacoesAutor.length > 0">
+      <ion-col *ngFor="let publicacao of publicacoesAutor">
+        <ion-card (click)="redirecionarPaginaPublicacao( publicacao.idPublicacao )">
+          <ion-card-header>
+            <div class="imagem">
+              <img [src]="publicacao.fotosPublicacao[0]">
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            <h2>{{ publicacao.tituloPublicacao }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row *ngIf="publicacoesAutor2.length > 0">
+      <ion-col *ngFor="let publicacao of publicacoesAutor2">
         <ion-card (click)="redirecionarPaginaPublicacao( publicacao.idPublicacao )">
           <ion-card-header>
             <div class="imagem">

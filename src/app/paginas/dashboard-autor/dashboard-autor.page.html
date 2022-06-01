@@ -2,6 +2,9 @@
 
 <ion-content>
   <div *ngIf="componenteExibido == 0" class="ion-padding">
+    <ion-row>
+      <ion-button fill="solid" expand="block" class="cadastroPublicacao" routerLink="../1">Cadastrar publicação</ion-button>
+    </ion-row>
     <ion-row class="ion-align-items-center">
       <ion-col size="6">
         <app-advanced-chart></app-advanced-chart>
@@ -14,17 +17,21 @@
     </ion-row>
     <ion-row class="ion-align-items-center">
       <ion-col size="4">
-        <div class="container">
-          <ion-label class="labelBar">Visualizações por publicacção</ion-label>
+        <div class="container, espacamentoInferior">
+          <ion-label class="labelBar">Por publicações mais vendidas</ion-label>
         </div>
       </ion-col>
       <ion-col size="8">
         <app-bar-chart></app-bar-chart>
       </ion-col>
     </ion-row>
+    
+    <app-pedidos></app-pedidos>
   </div>
 
   <div *ngIf="componenteExibido == 1" class="ion-padding">
+    <app-banner-nova-publicacao></app-banner-nova-publicacao>
+    
     <app-nova-publicacao></app-nova-publicacao>
   </div>
 
@@ -34,10 +41,6 @@
 
   <div *ngIf="componenteExibido == 3" class="ion-padding">
     <app-dados-cadastrais></app-dados-cadastrais>
-  </div>
-
-  <div *ngIf="componenteExibido == 4" class="ion-padding">
-    <app-pedidos></app-pedidos>
   </div>
 
   <div *ngIf="componenteExibido == 5">

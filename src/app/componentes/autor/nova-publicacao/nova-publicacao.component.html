@@ -1,6 +1,6 @@
 <div>
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Titulo:</ion-label>
+    <ion-label class="labelCampo">Titulo da publicação:</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -8,15 +8,31 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Descrição:</ion-label>
-  </ion-row>
- 
-  <ion-row class="ion-align-items-center">
-    <ion-textarea [(ngModel)]="novaPublicacao.descricaoPublicacao" placeholder="Insira a descrição da publicação"></ion-textarea>
+    <ion-label class="labelCampo">Número de páginas:</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Gênero</ion-label>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.qtdPaginasPublicacao" placeholder="Insira o número de páginas da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Tamanho (em cm):</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="number" [(ngModel)]="novaPublicacao.tamPublicacao[0]" placeholder="Insira o tamanho da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Peso (em gramas):</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-input type="number" [(ngModel)]="novaPublicacao.pesoPublicacao" placeholder="Insira o peso da publicação"></ion-input>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center">
+    <ion-label class="labelCampo">Selecione o gênero</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
@@ -36,31 +52,31 @@
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Peso (kg)</ion-label>
+    <ion-label class="labelCampo">Descrição:</ion-label>
+  </ion-row>
+ 
+  <ion-row class="ion-align-items-center">
+    <ion-textarea [(ngModel)]="novaPublicacao.descricaoPublicacao" placeholder="Insira a descrição da publicação"></ion-textarea>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" [(ngModel)]="novaPublicacao.pesoPublicacao" placeholder="Insira o peso do livro"></ion-input>
+    <ion-label class="labelCampo">Preço De:</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Quantidade de páginas</ion-label>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.precoDePublicacao" placeholder="Insira o preço 'De:' da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" [(ngModel)]="novaPublicacao.qtdPaginasPublicacao" placeholder="Insira a quantidade de páginas da publicação"></ion-input>
+    <ion-label class="labelCampo">Preço Por:</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Preço</ion-label>
+    <ion-input type="number" [(ngModel)]="novaPublicacao.precoPorPublicacao" placeholder="Insira o preço 'Por:' da publicação"></ion-input>
   </ion-row>
 
   <ion-row class="ion-align-items-center">
-    <ion-input type="number" [(ngModel)]="novaPublicacao.precoPublicacao" placeholder="Insira o preço de venda da publicação"></ion-input>
-  </ion-row>
-
-  <ion-row class="ion-align-items-center">
-    <ion-label class="labelCampo">Fotos</ion-label>
+    <ion-label class="labelCampo">Carregar imagem da capa:</ion-label>
   </ion-row>
 
   <ion-row class="ion-align-items-center">

@@ -17,6 +17,7 @@ import { PublicacoesPaginaAutorComponent } from 'src/app/componentes/autor/publi
 import { DadosCadastraisComponent } from 'src/app/componentes/autor/dados-cadastrais/dados-cadastrais.component';
 import { PedidosComponent } from 'src/app/componentes/autor/pedidos/pedidos.component';
 import { HeaderPaginaAutorComponent } from 'src/app/componentes/autor/header-pagina-autor/header-pagina-autor.component';
+import { BannerNovaPublicacaoComponent } from 'src/app/componentes/banner-nova-publicacao/banner-nova-publicacao.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,6 @@ import { HeaderPaginaAutorComponent } from 'src/app/componentes/autor/header-pag
     DashboardAutorPageRoutingModule,
     NgxChartsModule
   ],
-  declarations: [DashboardAutorPage, ToolbarComponent, FooterComponent, BarChartComponent, AdvancedChartComponent, NovaPublicacaoComponent, PublicacoesPaginaAutorComponent, DadosCadastraisComponent, PedidosComponent, HeaderPaginaAutorComponent, PublicacoesPaginaAutorComponent]
+  declarations: [DashboardAutorPage, ToolbarComponent, FooterComponent, BarChartComponent, AdvancedChartComponent, NovaPublicacaoComponent, PublicacoesPaginaAutorComponent, DadosCadastraisComponent, PedidosComponent, HeaderPaginaAutorComponent, PublicacoesPaginaAutorComponent, BannerNovaPublicacaoComponent]
 })
 export class DashboardAutorPageModule {}

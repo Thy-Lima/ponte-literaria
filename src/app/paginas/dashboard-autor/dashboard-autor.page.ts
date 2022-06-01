@@ -17,6 +17,10 @@ export class DashboardAutorPage implements OnInit {
   public componenteExibido: number;
   public autor: modeloAutor = UsuariosService.usuarioLogado.cadastroUsuario;
   
+  public mudarComponenteExibido() {
+    this.componenteExibido = 1;
+  }
+  
   ngOnInit() {
   }
 

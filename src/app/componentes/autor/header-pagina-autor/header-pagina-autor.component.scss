@@ -1,7 +1,7 @@
 .headerImagens {
     width: 100%;
     height: 190px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
 }
 
 .capaAutor {
@@ -29,7 +29,7 @@ ion-avatar {
 h1 {
     font-weight: bolder;
     font-size: 1.5em;
-    margin-top: -30px;
+    margin-top: -70px;
     margin-left: 17.5%;
 }
 
@@ -44,6 +44,7 @@ h1 {
 list {
     align-items: center;
     text-align: center;
+    margin-left: 30%;
 }
 
 .liTitulo {
@@ -57,4 +58,9 @@ li {
     margin-top: 5px;
     color: blue;
     font-style: italic;
+}
+
+.alinhamentoGenerosAutor {
+    margin-left: 17.5%;
+    margin-top: -35px;
 }

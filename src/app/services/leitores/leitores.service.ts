@@ -13,4 +13,8 @@ export interface modeloLeitor {
 export class LeitoresService {
 
   constructor() { }
+
+  static leitoresCadastrados: modeloLeitor[] = [
+    { idLeitor: 5, nomeLeitor: 'Mariana', sobrenomeLeitor: 'Ferraz', fotoLeitor: '../assets/avatar/default/person.jpg' }
+  ];
 }

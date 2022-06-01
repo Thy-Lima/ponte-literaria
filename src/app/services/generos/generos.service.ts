@@ -12,15 +12,15 @@ export class GenerosService {
   constructor() { }
 
   static generosCadastrados: modeloGenero[] = [
-    { tituloGenero: 'Ação' },
-    { tituloGenero: 'Fiçção Científica' },
-    { tituloGenero: 'Natureza' },
-    { tituloGenero: 'Receitas' },
-    { tituloGenero: 'Literatura' },
-    { tituloGenero: 'Mangás' },
-    { tituloGenero: 'HQ' },
+    { tituloGenero: 'Ação e Aventura' },
+    { tituloGenero: 'Autoajuda' },
+    { tituloGenero: 'Fantasia' },
+    { tituloGenero: 'Ficção científica' },
+    { tituloGenero: 'Ficção literária' },
+    { tituloGenero: 'Humanidades' },
+    { tituloGenero: 'Mistério' },
     { tituloGenero: 'Quadrinhos' },
-    { tituloGenero: 'Suspense' },
-    { tituloGenero: 'Aventura' },
+    { tituloGenero: 'Romance' },
+    { tituloGenero: 'Tecnologia' },
   ];
 }

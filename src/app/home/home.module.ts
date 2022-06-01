@@ -13,6 +13,7 @@ import { BannerComponent } from '../componentes/home/banner/banner.component';
 import { GenerosComponent } from '../componentes/home/generos/generos.component';
 import { AutoresDestaqueComponent } from '../componentes/home/autores-destaque/autores-destaque.component';
 import { PublicacoesDestaqueComponent } from '../componentes/home/publicacoes-destaque/publicacoes-destaque.component';
+import { TemasComponent } from '../componentes/temas/temas.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,6 @@ import { PublicacoesDestaqueComponent } from '../componentes/home/publicacoes-de
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, ToolbarComponent, FooterComponent, BannerComponent, GenerosComponent, AutoresDestaqueComponent, PublicacoesDestaqueComponent]
+  declarations: [HomePage, ToolbarComponent, FooterComponent, BannerComponent, GenerosComponent, AutoresDestaqueComponent, PublicacoesDestaqueComponent, TemasComponent]
 })
 export class HomePageModule {}
