@@ -32,10 +32,6 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/modal-generos/modal-generos.module').then( m => m.ModalGenerosPageModule)
   },
   {
-    path: 'pagina-resultado-busca',
-    loadChildren: () => import('./paginas/pagina-resultado-busca/pagina-resultado-busca.module').then( m => m.PaginaResultadoBuscaPageModule)
-  },
-  {
     path: 'pagina-leitor',
     loadChildren: () => import('./paginas/pagina-leitor/pagina-leitor.module').then( m => m.PaginaLeitorPageModule)
   }
